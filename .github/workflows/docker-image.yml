@@ -1,17 +1,18 @@
-name: Docker Image CI
+name: Build and push develop docker image to GCR
 
 on:
   push:
     tags:
     - dev**
+    - test**
+    - pre-release**
 
 jobs:
 
-  build:
-
+  build-platform-image:
     runs-on: ubuntu-latest
 
     steps:
     - uses: actions/checkout@v2
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
+      run: docker build
