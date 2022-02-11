@@ -1,0 +1,2 @@
+- | --> multi-line script futtatása
+- checkout --> checkout our source code and run ubuntu latest ??? Hogyan lehet másik repo-ra hivatkozni ???

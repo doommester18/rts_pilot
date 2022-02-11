@@ -9,12 +9,12 @@ on:
 
 jobs:
 
-  build-platform-image:
+  build:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Check out repository
     - uses: actions/checkout@v2
 
     - name: Build the Docker image
-      run: docker build -t
+      run: |
+        docker build ./nodejs -t template
